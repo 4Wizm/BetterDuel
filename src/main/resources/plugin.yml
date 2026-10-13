@@ -1,0 +1,43 @@
+name: BetterDuel
+version: 1.0.1
+main: com.wizm.betterduel.BetterDuel
+api-version: '1.21'
+author: 4wizm
+description: Sistema di duelli realistici con kit, statistiche e leaderboard.
+
+commands:
+  duel:
+    description: Comando principale
+    usage: /duel
+    aliases: [bd, betterduel]
+  duels:
+    description: Apre il menu dei duelli
+    usage: /duels
+    aliases: [duelmenu, duellist]
+  duelleaderboard:
+    description: Classifica
+    usage: /duelleaderboard
+    aliases: [dtop, duelrank]
+
+permissions:
+  betterduel.use:
+    description: Uso base
+    default: true
+  betterduel.queue:
+    description: Entrare in coda
+    default: true
+  betterduel.kit.soldato:
+    description: Kit Soldato
+    default: true
+  betterduel.kit.tank:
+    description: Kit Tank
+    default: op
+  betterduel.kit.assassino:
+    description: Kit Assassino
+    default: op
+  betterduel.admin:
+    description: Admin
+    default: op
+  betterduel.stats.others:
+    description: Statistiche altrui
+    default: op

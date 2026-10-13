@@ -1,0 +1,193 @@
+# ==========================================
+# BetterDuel v1.0.1 - Config
+# Autore: 4wizm
+# ==========================================
+
+impostazioni:
+  mondo-duelli: "betterduel_arena"
+  crea-mondo-se-assente: true
+  tempo-attesa-coda-secondi: 30
+  ritorno-dopo-secondi: 2
+
+arena:
+  blocco-secondi: 3
+  blocco-messaggio: "&eIl duello inizia tra &c%tempo% &esecondi..."
+  blocco-messaggio-fine: "&a&lVIA! Il duello e iniziato!"
+  blocca-rompere-blocchi: true
+  blocca-piazzare-blocchi: true
+  blocca-danno-durante-countdown: true
+  elenco:
+    arena1:
+      spawn1:
+        x: 0.5
+        y: 65.0
+        z: 0.5
+        yaw: 0.0
+        pitch: 0.0
+      spawn2:
+        x: 0.5
+        y: 65.0
+        z: 15.5
+        yaw: 180.0
+        pitch: 0.0
+
+matchmaking:
+  abilitato: true
+  range-kill-iniziale: 5
+  range-kill-medio: 10
+  range-kill-alto: 25
+  soglia-kill-medio: 50
+  soglia-kill-alto: 200
+  tempo-allargamento-range: 20
+
+ricompense:
+  abilitato: true
+  comandi:
+    - "eco give %player% 100"
+    - "xp add %player% 50 points"
+  messaggio:
+    - "&a&lHAI VINTO!"
+    - "&7Hai ricevuto &e100$ &7e &e50 XP"
+
+# ==========================================
+# MENU GUI
+# ==========================================
+gui:
+  titolo-menu: "&8&lMenu Duelli"
+  righe: 3
+
+  # Item mostrato quando NON ci sono giocatori in coda
+  nessun-giocatore:
+    materiale: "BARRIER"
+    nome: "&c&lNessun giocatore in coda"
+    lore:
+      - "&7Attendi che qualcuno entri in coda"
+      - "&7oppure usa &e/duel queue %kit% &7per entrare tu"
+
+  # Item mostrato per ogni giocatore in coda
+  giocatore:
+    nome: "&a%player%"
+    lore:
+      - "&7Kit: &e%kit%"
+      - "&7Kill: &e%kill%"
+      - "&7Vittorie: &a%vittorie%"
+      - ""
+      - "&eClicca per sfidare questo giocatore!"
+
+  # Item per sfidare col proprio kit preferito
+  sfida-diretta:
+    materiale: "DIAMOND_SWORD"
+    nome: "&b&lSfida rapida"
+    lore:
+      - "&7Clicca per entrare in coda"
+      - "&7col kit &e%kit%"
+
+# ==========================================
+# KIT
+# ==========================================
+kit:
+  soldato:
+    nome: "&aSoldato"
+    permesso: "betterduel.kit.soldato"
+    icona: "IRON_SWORD"
+    contenuto:
+      - "IRON_SWORD:1"
+      - "IRON_HELMET:1"
+      - "IRON_CHESTPLATE:1"
+      - "IRON_LEGGINGS:1"
+      - "IRON_BOOTS:1"
+      - "GOLDEN_APPLE:4"
+      - "COOKED_BEEF:16"
+  tank:
+    nome: "&bTank"
+    permesso: "betterduel.kit.tank"
+    icona: "DIAMOND_CHESTPLATE"
+    contenuto:
+      - "DIAMOND_SWORD:1"
+      - "DIAMOND_HELMET:1"
+      - "DIAMOND_CHESTPLATE:1"
+      - "DIAMOND_LEGGINGS:1"
+      - "DIAMOND_BOOTS:1"
+      - "GOLDEN_APPLE:8"
+      - "SHIELD:1"
+      - "COOKED_BEEF:32"
+  assassino:
+    nome: "&cAssassino"
+    permesso: "betterduel.kit.assassino"
+    icona: "NETHERITE_SWORD"
+    contenuto:
+      - "NETHERITE_SWORD:1"
+      - "CHAINMAIL_HELMET:1"
+      - "LEATHER_CHESTPLATE:1"
+      - "CHAINMAIL_LEGGINGS:1"
+      - "LEATHER_BOOTS:1"
+      - "ENDER_PEARL:4"
+      - "GOLDEN_APPLE:6"
+      - "COOKED_BEEF:24"
+
+database:
+  abilitato: true
+  host: "localhost"
+  porta: 3306
+  nome: "betterduel"
+  utente: "root"
+  password: "password"
+  pool-size: 10
+
+messaggi:
+  prefisso: "&8[&6BetterDuel&8] &7"
+  no-permesso: "&cNon hai il permesso!"
+  giocatore-non-trovato: "&cGiocatore non trovato!"
+  solo-giocatori: "&cSolo in game!"
+  gia-in-duello: "&cSei gia in duello!"
+  gia-in-coda: "&cSei gia in coda!"
+  entrato-coda: "&aSei in coda con kit &e%kit%&a!"
+  uscito-coda: "&eSei uscito dalla coda."
+  avversario-trovato: "&aAvversario: &e%avversario%"
+  duello-iniziato: "&6&lDuello iniziato! Buona fortuna!"
+  duello-finito-vincitore: "&a&lHAI VINTO! &7Hai sconfitto &e%perdente%"
+  duello-finito-perdente: "&c&lHAI PERSO! &7Sconfitto da &e%vincitore%"
+  avversario-uscito: "&cAvversario uscito, hai vinto!"
+  non-in-duello: "&cNon sei in duello!"
+  kit-non-valido: "&cKit non valido!"
+  kit-selezionato: "&aKit &e%kit% selezionato"
+  setspawn-usato: "&aSpawn &e%tipo% &adell'arena &e%arena% &aimpostato!"
+  arena-non-trovata: "&cArena non trovata!"
+  statistiche-titolo: "&6Statistiche di &e%giocatore%"
+  statistiche-duelli: "&7Duelli: &e%duelli%"
+  statistiche-vittorie: "&7Vittorie: &a%vittorie%"
+  statistiche-sconfitte: "&7Sconfitte: &c%sconfitte%"
+  statistiche-kill: "&7Kill: &e%kill%"
+  statistiche-death: "&7Death: &e%death%"
+  statistiche-kdr: "&7KDR: &e%kdr%"
+  leaderboard-titolo: "&6--- CLASSIFICA BETTERDUEL ---"
+  leaderboard-vuota: "&7Nessun dato."
+  database-errore: "&cErrore database!"
+  ricarica-config: "&aConfig ricaricata!"
+
+scoreboard:
+  abilitata: true
+  titolo: "&6&lBETTERDUEL"
+  righe:
+    - "&7&m----------------"
+    - "&eAvversario: &f%avversario%"
+    - "&7"
+    - "&aTuoi HP: &f%tuoi_hp%"
+    - "&cSuoi HP: &f%suoi_hp%"
+    - "&7"
+    - "&eKit: &f%kit%"
+    - "&7&m----------------"
+
+titoli:
+  vittoria:
+    titolo: "&a&lVITTORIA"
+    sottotitolo: "&7Hai vinto!"
+    fade-in: 10
+    stay: 60
+    fade-out: 10
+  sconfitta:
+    titolo: "&c&lSCONFITTA"
+    sottotitolo: "&7Riprova!"
+    fade-in: 10
+    stay: 60
+    fade-out: 10

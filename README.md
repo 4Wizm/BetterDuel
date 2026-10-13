@@ -1,6 +1,6 @@
-================================================================
+
                           BETTERDUEL
-================================================================
+
 Versione : 1.0.1
 Autore   : 4wizm
 API      : Spigot/Paper 1.21+
@@ -10,9 +10,9 @@ Descrizione: Sistema di duelli realistici con kit personalizzabili,
 ================================================================
 
 
-----------------------------------------------------------------
+
                         CARATTERISTICHE
-----------------------------------------------------------------
+
 - Sistema di duelli 1v1 con countdown e PvP controllato
 - Matchmaking intelligente basato sul numero di kill dei giocatori
 - Kit personalizzabili da config (armature, armi, offhand, cibo)
@@ -26,9 +26,8 @@ Descrizione: Sistema di duelli realistici con kit personalizzabili,
 - Protezione arena (blocco rottura/piazzamento blocchi)
 
 
-----------------------------------------------------------------
                         INSTALLAZIONE
-----------------------------------------------------------------
+
 1. Scarica il file BetterDuel-1.0.1.jar
 2. Metti il file nella cartella plugins/ del tuo server
 3. Riavvia il server (o usa /reload)
@@ -38,9 +37,9 @@ Descrizione: Sistema di duelli realistici con kit personalizzabili,
    per impostare gli spawn delle arene
 
 
-----------------------------------------------------------------
+
                            COMANDI
-----------------------------------------------------------------
+
 
 --- Comando principale: /duel ---
 Alias: /bd, /betterduel
@@ -69,9 +68,9 @@ Alias: /dtop, /duelrank
 /duelleaderboard <duelli|vittorie|sconfitte|kill>   Classifica specifica
 
 
-----------------------------------------------------------------
+
                           PERMESSI
-----------------------------------------------------------------
+
 
 betterduel.use              Uso base del plugin (menu duelli)     [true]
 betterduel.queue            Entrare in coda per un duello         [true]
@@ -85,9 +84,8 @@ NOTA: I kit personalizzati aggiunti in config.yml generano
       automaticamente il permesso betterduel.kit.<nome-kit>
 
 
-----------------------------------------------------------------
+
                         CONFIGURAZIONE
-----------------------------------------------------------------
 
 --- Sezione impostazioni ---
 impostazioni:
@@ -160,9 +158,8 @@ Personalizza i title mostrati a fine duello (vittoria/sconfitta)
 con: titolo, sottotitolo, fade-in, stay, fade-out
 
 
-----------------------------------------------------------------
+
                       KIT PREDEFINITI
-----------------------------------------------------------------
 
 SOLDATO
   Icona    : IRON_SWORD
@@ -203,9 +200,8 @@ Le armature vengono equipaggiate automaticamente,
 lo scudo va in offhand.
 
 
-----------------------------------------------------------------
+
                           DATABASE
-----------------------------------------------------------------
 Il plugin supporta MySQL tramite HikariCP per statistiche
 persistenti.
 
@@ -225,9 +221,9 @@ La tabella betterduel_stats viene creata automaticamente al
 primo avvio.
 
 
-----------------------------------------------------------------
+
                     PLACEHOLDER MESSAGGI
-----------------------------------------------------------------
+
 
 %player%          GUI, ricompense
 %kit%             Messaggi coda, GUI, scoreboard
@@ -250,10 +246,9 @@ primo avvio.
 I colori usano il formato & (es. &a, &l, &c).
 
 
-----------------------------------------------------------------
                           SUPPORTO
-----------------------------------------------------------------
+
 Per bug, suggerimenti o richieste: contatta freegean su discord
 
               Buon divertimento con BetterDuel!
-================================================================
+
